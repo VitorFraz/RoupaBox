@@ -38,8 +38,9 @@ namespace RoupaBox
                     break;
 
                 case 1:
-                    Thread.Sleep(1000);
-                    Console.Clear();
+
+                    Clientes variavelcilentes = new Clientes();
+                    variavelcilentes.cadCliente();
                     break;
 
                 case 2:
