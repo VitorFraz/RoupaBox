@@ -17,7 +17,16 @@ namespace RoupaBox
             string nomeCli = Console.ReadLine();
 
             Console.WriteLine("\nDigite o CPF do Cliente: ");
-            long cpfCli = long.Parse(Console.ReadLine());
+            string cpfCli = Console.ReadLine();
+
+            if(cpfCli.Length !=11)
+            {
+                Console.WriteLine("Erro");
+            }
+            else
+            {
+                Console.WriteLine("Certo");
+            }
 
             Console.WriteLine("\nDigite o Telefone do Cliente: ");
             long telCli = long.Parse(Console.ReadLine());
@@ -27,6 +36,12 @@ namespace RoupaBox
 
             Console.WriteLine("\nDigite o E-mail do Cliente: ");
             string emailCli = Console.ReadLine();
+            while (!emailCli.Contains("@"))
+            {
+                Console.WriteLine("O endereço de e-mail não é Válido, tente novamente...");
+                emailCli = Console.ReadLine();
+            }
+            
 
             Console.WriteLine("\nDigite o Sexo do Cliente: ");
             string sexCli = Console.ReadLine();
