@@ -52,7 +52,7 @@ namespace RoupaBox
             Console.WriteLine("\nDigite o CEP do Cliente: ");
             long cepCli = long.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nCliente cadastrado com sucesso!!!");
+            Console.WriteLine("\nCliente cadastrado com sucesso!");
             Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
             Console.ReadKey();
 
