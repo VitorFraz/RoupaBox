@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="Cabecalho.cs" />
     <Compile Include="Clientes.cs" />
+    <Compile Include="ClientesCad.cs" />
     <Compile Include="Menu.cs" />
-    <Compile Include="Produto.cs" />
+    <Compile Include="Produtos.cs" />
+    <Compile Include="ProdutosCad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,11 +10,14 @@ namespace RoupaBox
     {
         static void Main(string[] args)
         {
-            Cabecalho variavelcabecalho = new Cabecalho();
-            variavelcabecalho.cabecalho();
+            ExibirCabecalho variavelCabecalho = new ExibirCabecalho();
+            variavelCabecalho.Cabecalho();
 
-            Menu variavelmenu = new Menu();
-            variavelmenu.menu();
+            //Clientes varCli = new Clientes();
+            Produtos varPro = new Produtos();
+
+            ExibirMenu variavelMenu = new ExibirMenu();
+            variavelMenu.Menu(varPro);
         }
     }
 }

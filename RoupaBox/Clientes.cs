@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 
 namespace RoupaBox
 {
-    internal class Clientes
+    internal class ExibirClientes
     {
+        List<ClientesCad> listaClientes = new List<ClientesCad>();
         public void cadCliente() 
         {
             Console.Clear();
             Console.WriteLine("Cadastro de Clientes");
+
+            var Clientes = new ClientesCad(nomeCli);
+
             Console.WriteLine("\nDigite o nome Completo do Cliente: ");
             string nomeCli = Console.ReadLine();
 
@@ -67,17 +71,27 @@ namespace RoupaBox
             Console.WriteLine("\nDigite o CEP do Cliente: ");
             long cepCli = long.Parse(Console.ReadLine());
 
+            listaClientes.Add(Clientes);
+
             Console.WriteLine("\nCliente cadastrado com sucesso!");
+
+            foreach (var cliente in listaClientes)
+            {
+                Console.WriteLine($"Nome: {cliente.nomeCli}, " + $"CPF: {cliente.cpfCli}");
+            }
+
             Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
             Console.ReadKey();
 
             Console.Clear();
 
-            Cabecalho variavelcabecalho = new Cabecalho();
-            variavelcabecalho.cabecalho();
+            ExibirCabecalho variavelcabecalho = new ExibirCabecalho();
+            variavelcabecalho.Cabecalho();
 
-            Menu variavelmenu = new Menu();
-            variavelmenu.menu();
+            ExibirMenu variavelmenu = new ExibirMenu();
+            ExibirClientes varCli = new ExibirClientes();
+
+            return Clientes;
         }
     }
 }

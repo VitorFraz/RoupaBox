@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RoupaBox
 {
-    internal class Cabecalho
+    internal class ExibirCabecalho
     {
-        public void cabecalho()
+        public void Cabecalho()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("═════════════════════════════════════════════════════════════════");
