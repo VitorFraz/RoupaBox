@@ -47,8 +47,9 @@ namespace RoupaBox
                         break;
 
                     case 2:
-                        Thread.Sleep(1000);
-                        Console.Clear();
+
+                        varCli.listarCLientes();
+
                         break;
 
                     case 3:
@@ -57,8 +58,9 @@ namespace RoupaBox
                         break;
 
                     case 4:
-                        Thread.Sleep(1000);
-                        Console.Clear();
+
+                        varPro.listarProdutos();
+
                         break;
 
                     default:

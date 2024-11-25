@@ -24,15 +24,6 @@ namespace RoupaBox
             string cpfCli = Console.ReadLine();
             Cliente.cpfCli = cpfCli;
 
-            if(cpfCli.Length !=11)
-            {
-                Console.WriteLine("Erro");
-            }
-            else
-            {
-                Console.WriteLine("Certo");
-            }
-
             Console.WriteLine("\nDigite o Telefone do Cliente: ");
             long telCli = long.Parse(Console.ReadLine());
 
@@ -82,14 +73,20 @@ namespace RoupaBox
 
             Console.WriteLine("\nCliente cadastrado com sucesso!");
 
+
+            return Cliente;
+        }
+        public void listarCLientes()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de Clientes Cadastrados");
             foreach (var cliente in listaClientes)
             {
                 Console.WriteLine($"Nome: {cliente.nomeCli}, " + $"CPF: {cliente.cpfCli}");
             }
 
             Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
-            Console.ReadKey();
-
+            Console.ReadKey();            
             Console.Clear();
 
             ExibirCabecalho variavelcabecalho = new ExibirCabecalho();
@@ -97,8 +94,6 @@ namespace RoupaBox
 
             ExibirMenu variavelmenu = new ExibirMenu();
             ExibirClientes varCli = new ExibirClientes();
-
-            return Cliente;
         }
     }
 }
