@@ -13,11 +13,12 @@ namespace RoupaBox
             ExibirCabecalho variavelCabecalho = new ExibirCabecalho();
             variavelCabecalho.Cabecalho();
 
-            //Clientes varCli = new Clientes();
-            Produtos varPro = new Produtos();
+            ExibirClientes varCli = new ExibirClientes();
+            ExibirProdutos varPro = new ExibirProdutos();
 
             ExibirMenu variavelMenu = new ExibirMenu();
-            variavelMenu.Menu(varPro);
+            variavelMenu.Menu(varPro, varCli);
+
         }
     }
 }

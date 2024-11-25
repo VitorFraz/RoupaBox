@@ -10,18 +10,19 @@ namespace RoupaBox
     internal class ExibirClientes
     {
         List<ClientesCad> listaClientes = new List<ClientesCad>();
-        public void cadCliente() 
+        public ClientesCad CadCliente() 
         {
             Console.Clear();
             Console.WriteLine("Cadastro de Clientes");
 
-            var Clientes = new ClientesCad(nomeCli);
-
             Console.WriteLine("\nDigite o nome Completo do Cliente: ");
             string nomeCli = Console.ReadLine();
 
+            var Cliente = new ClientesCad(nomeCli);
+
             Console.WriteLine("\nDigite o CPF do Cliente: ");
             string cpfCli = Console.ReadLine();
+            Cliente.cpfCli = cpfCli;
 
             if(cpfCli.Length !=11)
             {
@@ -49,29 +50,35 @@ namespace RoupaBox
 
             Console.WriteLine("\nDigite o Sexo do Cliente: ");
             string sexCli = Console.ReadLine();
+            Cliente.sexCli = sexCli;
 
             Console.WriteLine("\nDigite a Rua / Avenida do Cliente: ");
             string ruaCli = Console.ReadLine();
+            Cliente.ruaCli = ruaCli;
 
             Console.WriteLine("\nDigite o complemento do Cliente: ");
             string compCli = Console.ReadLine();
+            Cliente.compCli = compCli;
 
             Console.WriteLine("\nDigite o numero do Cliente: ");
             int numCli = int.Parse(Console.ReadLine());
 
             Console.WriteLine("\nDigite o Bairro do Cliente: ");
             string bairCli = Console.ReadLine();
+            Cliente.bairCli = bairCli;
 
             Console.WriteLine("\nDigite a Cidade do Cliente: ");
             string cidCli = Console.ReadLine();
+            Cliente.cidCli = cidCli;
 
             Console.WriteLine("\nDigite o Estado do Cliente: ");
             string estCli = Console.ReadLine();
+            Cliente.estCli = estCli;
 
             Console.WriteLine("\nDigite o CEP do Cliente: ");
             long cepCli = long.Parse(Console.ReadLine());
 
-            listaClientes.Add(Clientes);
+            listaClientes.Add(Cliente);
 
             Console.WriteLine("\nCliente cadastrado com sucesso!");
 
@@ -91,7 +98,7 @@ namespace RoupaBox
             ExibirMenu variavelmenu = new ExibirMenu();
             ExibirClientes varCli = new ExibirClientes();
 
-            return Clientes;
+            return Cliente;
         }
     }
 }

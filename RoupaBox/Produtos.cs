@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,8 @@ namespace RoupaBox
     internal class ExibirProdutos
     {
         List<ProdutosCad> listaProdutos = new List<ProdutosCad>();
-        public ProdutosCad cadProduto()
+
+        public ProdutosCad CadProduto()
         {
             Console.Clear();
             Console.WriteLine("Cadastro de Produtos");
@@ -49,6 +51,8 @@ namespace RoupaBox
                 Console.WriteLine("Valor Inválido, Tente Novamente.\n");
                 Console.WriteLine("\nDigite o Peso do Produto: ");
                 Produto.pesoPro = pesoPro;
+            }
+
 
                 listaProdutos.Add(Produto);
 
@@ -68,10 +72,12 @@ namespace RoupaBox
                 variavelcabecalho.Cabecalho();
 
                 ExibirMenu variavelmenu = new ExibirMenu();
+
                 ExibirProdutos varPro = new ExibirProdutos();
 
                 return Produto;
             }
         }
     }
-}
+    
+

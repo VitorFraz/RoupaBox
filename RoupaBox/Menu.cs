@@ -9,7 +9,7 @@ namespace RoupaBox
 {
     internal class ExibirMenu
     {
-        public void Menu(ExibirProdutos varPro)
+        public void Menu(ExibirProdutos varPro, ExibirClientes varCli)
         {
             List<ProdutosCad> listaP = new List<ProdutosCad>();
             List<ClientesCad> listaC = new List<ClientesCad>();
@@ -43,7 +43,7 @@ namespace RoupaBox
 
                     case 1:
 
-                        varCli.cadCliente();
+                        varCli.CadCliente();
                         break;
 
                     case 2:
@@ -53,7 +53,7 @@ namespace RoupaBox
 
                     case 3:
 
-                        varPro.cadProduto();
+                        varPro.CadProduto();
                         break;
 
                     case 4:
